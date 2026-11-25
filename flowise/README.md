@@ -49,6 +49,10 @@ In that capture, Flowise reports initialization errors including an `ERR_PACKAGE
 
 The Flowise UI screenshots show a banner stating that Flowise is sunsetting. Check the project's current status before relying on Flowise for a new or long-lived deployment.
 
-## Files and reproducibility
+## Flow definitions and execution evidence
 
-The images document the visible designs, not all node prompts, settings, credentials, or connections. To reproduce or import a workflow, export its Flowise flow definition from Flowise and add that export separately. Never publish API keys, credentials, or private course documents.
+The [`exports/`](exports/) folder contains the five Flowise JSON workflow definitions. Import them through Flowise's flow import feature, then configure any model providers, credentials, or local services required by the nodes.
+
+These JSON files document saved workflow configurations (nodes, settings, and connections). They do **not** contain execution history and do not prove that a workflow ran successfully. The screenshots document the visual designs. The supplied terminal screenshot shows Flowise startup errors, not a successful run. No Flowise execution logs or successful execution records were supplied.
+
+The JSON files were checked for common token patterns; none were found. Several start nodes contain empty webhook/callback-secret fields. Never publish API keys, credentials, or private course documents.
